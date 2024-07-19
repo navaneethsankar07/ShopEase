@@ -1,6 +1,6 @@
 const db = require('../config/connection');
 const collection = require('../config/collections');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const { ObjectId } = require('mongodb');
 
 module.exports = {
