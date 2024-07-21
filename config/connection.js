@@ -16,10 +16,8 @@ const connect = async function(done) {
         await client.connect();
         state.db = client.db(dbname);
 
-        // Create a collection and insert a document to ensure the database is created
-        const collection = state.db.collection('testCollection');
-        const result = await collection.insertOne({ test: 'This is a test document' });
-        console.log('MongoDB connected successfully and test document inserted');
+        // Remove the test insert operation for production use
+        console.log('MongoDB connected successfully');
         done();
     } catch (err) {
         console.error('MongoDB connection error:', err);
